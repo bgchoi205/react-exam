@@ -43,14 +43,16 @@ function App() {
   );
 }
 
-// useEffect 는 매번 렌더링 될 때가 아닌 제일 처음 렌더링 될 때 한번만 실행되도록 보호해준다.
+// useEffect 는 매번 렌더링 될 때가 아닌 지정한 타이밍에만 실행되도록 보호해준다.
+// useEffect(실행할 코드, dependency)  // dependency는 지켜보려는 대상이다.
 // useEffect 부분을 아래처럼 한번에 써도 된다.
+// 아래처럼 useEffect의 두번째 요소인 배열에 아무것도 넣지 않는다면 제일 처음 실행될때 한번만 실행된다.
 
 // useEffect(() => {
 //   console.log("only once!");
 // }, []);
 
-// 아래처럼 [] 사이에 useState의 keyword를 지정해주면 keyword가 변화할 때만 함수가 실행된다.
+// 아래처럼 [](dependency)에 useState의 keyword를 지정해주면 keyword가 변화할 때만 함수가 실행된다.
 
 // useEffect(() => {
 //   console.log("Search For ", keyword);
