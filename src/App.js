@@ -1,6 +1,7 @@
 import Button from "./Button";
 import styles from "./App.module.css";
 import { useState, useEffect } from "react";
+import Cleanup from "./Cleanup";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -39,6 +40,7 @@ function App() {
       <h1 className={styles.title}>{counter}</h1>
       <Button text={"Continue"} />
       <button onClick={onClick}>click me</button>
+      <Cleanup />
     </div>
   );
 }
